@@ -59,7 +59,7 @@ namespace Microwave.Test.Integration
             NUnit.Framework.Assert.That(_timer.TimeRemaining, Is.EqualTo(time));
         }
 
-        [Test] //Hvordan testes stop inde  timer da den er privat?
+        [Test] //Hvordan testes stop inde i timer da den er privat?
         public void StartCooking_Timer_Stop()
         {
             int power = 50;
