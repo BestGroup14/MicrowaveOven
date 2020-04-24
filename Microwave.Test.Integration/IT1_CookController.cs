@@ -71,12 +71,15 @@ namespace Microwave.Test.Integration
         [Test]
         public void StartCooking_Display()
         {
-            //int numValues = 0;
-            //_timer.TimerTick += (o, args) => numValues++;
-            int min = 2;
-            int sec = 20;
+            int power = 50;
+            int time = 5000;
 
-            _timer.TimerTick += Raise.EventWith(this, new EventArgs());
+            _cookController.StartCooking(power, time);
+            time = time - 1000;
+
+            int min = time / 60;
+            int sec = time % 60;
+            System.Threading.Thread.Sleep(2100);
 
             _output.Received(1).OutputLine($"Display shows: {min:D2}:{sec:D2}");
            
