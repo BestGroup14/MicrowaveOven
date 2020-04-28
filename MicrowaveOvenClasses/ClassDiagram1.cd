@@ -1,2 +1,146 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MicrowaveOvenClasses.Boundary.Button" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Boundary\Button.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Boundary.Display" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEEAABAAAA=</HashCode>
+      <FileName>Boundary\Display.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Boundary.Door" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Boundary\Door.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Boundary.Light" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAARAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Boundary\Light.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Boundary.Output" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Boundary\Output.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Boundary.PowerTube" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Boundary\PowerTube.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Boundary.Timer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAA0AAAAAAAAAAABIAAAQAAAAAA=</HashCode>
+      <FileName>Boundary\Timer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Controllers.CookController" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIBAIAAAEAA=</HashCode>
+      <FileName>Controllers\CookController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MicrowaveOvenClasses.Controllers.UserInterface" BaseTypeListCollapsed="true">
+    <Position X="6" Y="0.5" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="MicrowaveOvenClasses.Controllers.UserInterface.States" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\UserInterface.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgQJAAAAABAAAAAAAAAAQoAAQACAAAAAAAIAAAAAABA=</HashCode>
+      <FileName>Controllers\UserInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.IButton" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Interfaces\IButton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.ICookController" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICookController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.IDisplay" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAABAAAA=</HashCode>
+      <FileName>Interfaces\IDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.IDoor" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Interfaces\IDoor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.ILight" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ILight.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.IOutput" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IOutput.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.IPowerTube" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPowerTube.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.ITimer" Collapsed="true">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAEAAAAAAAAAAABIAAAQAAAAAA=</HashCode>
+      <FileName>Interfaces\ITimer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MicrowaveOvenClasses.Interfaces.IUserInterface" Collapsed="true">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAAAAAAAAQoAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

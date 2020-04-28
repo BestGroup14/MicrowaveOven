@@ -32,7 +32,7 @@ namespace Microwave.Test.Unit
         {
             uut.StartCooking(50, 60);
 
-            timer.Received().Start(60);
+            timer.Received().Start(60000);
         }
 
         [Test]
@@ -48,10 +48,10 @@ namespace Microwave.Test.Unit
         {
             uut.StartCooking(50, 60);
 
-            timer.TimeRemaining.Returns(115);
+            timer.TimeRemaining.Returns(55000);
             timer.TimerTick += Raise.EventWith(this, EventArgs.Empty);
 
-            display.Received().ShowTime(1, 55);
+            display.Received().ShowTime(0, 55);
         }
 
         [Test]

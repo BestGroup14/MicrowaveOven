@@ -50,39 +50,45 @@ namespace Microwave.Test.Integration
         }
 
         [Test]
-        public void StartCooking_Timer()
+        public void StartCooking_Timer_Start()
         {
             int power = 50;
             int time = 2;
             _cookController.StartCooking(power, time);
 
-            NUnit.Framework.Assert.That(_timer.TimeRemaining, Is.EqualTo(time));
-        }
 
-        [Test] //Hvordan testes stop inde i timer da den er privat?
-        public void StartCooking_Timer_Stop()
-        {
-            int power = 50;
-            int time = 2;
-            _cookController.StartCooking(power, time);
-
+            NUnit.Framework.Assert.That(_timer.TimeRemaining/1000, Is.EqualTo(time));
         }
 
         [Test]
         public void StartCooking_Display()
         {
             int power = 50;
-            int time = 5000;
+            int time = 5;
 
             _cookController.StartCooking(power, time);
             time = time - 1000;
 
-            int min = time / 60;
-            int sec = time % 60;
+            int min = 0;
+            int sec = 3;
             System.Threading.Thread.Sleep(2100);
 
             _output.Received(1).OutputLine($"Display shows: {min:D2}:{sec:D2}");
            
+        }
+
+        [Test]
+        public void StartCooking_Expired()
+        {
+            int power = 50;
+            int time = 5;
+
+            _cookController.StartCooking(power, time);
+            time = time - 1000;
+
+            System.Threading.Thread.Sleep(5100);
+
+            _output.Received(1).OutputLine($"PowerTube turned off");
         }
     }
 }

@@ -40,7 +40,7 @@ namespace MicrowaveOvenClasses.Controllers
         public void StartCooking(int power, int time)
         {
             myPowerTube.TurnOn(power);
-            myTimer.Start(time);
+            myTimer.Start(time*1000);
             isCooking = true;
         }
 
@@ -63,7 +63,7 @@ namespace MicrowaveOvenClasses.Controllers
 
         public void OnTimerTick(object sender, EventArgs e)
         {
-            int remaining = myTimer.TimeRemaining;
+            int remaining = myTimer.TimeRemaining/1000;
             myDisplay.ShowTime(remaining/60, remaining % 60);
         }
     }
