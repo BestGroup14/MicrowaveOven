@@ -5,6 +5,7 @@ using MicrowaveOvenClasses.Controllers;
 using MicrowaveOvenClasses.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
+//using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 
 namespace Microwave.Test.Integration
@@ -28,15 +29,41 @@ namespace Microwave.Test.Integration
             _cookController = new CookController(_timer, _display, _powerTube);
         }
 
-        [Test]
-        public void StartCooking_PowerTube()
+        [TestCase(1)]
+        [TestCase(24)]
+        [TestCase(66)]
+        [TestCase(99)]
+        [TestCase(100)]
+        public void StartCooking_PowerTube(int power)
         {
-            int power = 50;
             int time = 2;
             _cookController.StartCooking(power, time);
             
             _output.Received(1).OutputLine($"PowerTube works with {power}");
         }
+
+
+        [TestCase(101)]
+        [TestCase(150)]
+        [TestCase(-1)]
+        public void StartCooking__PowerTube_OutOfRangeException(int power)
+        {
+            int time = 2;
+
+            NUnit.Framework.Assert.That(()=> _cookController.StartCooking(power, time),Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
+
+        [Test]
+        public void StartCooking__PowerTube_TurnOnException()
+        {
+            int power = 50;
+            int time = 2;
+            
+            _cookController.StartCooking(power, time);
+
+            NUnit.Framework.Assert.That(() => _cookController.StartCooking(power, time), Throws.TypeOf<ApplicationException>());
+        }
+
 
         [Test]
         public void StartCooking_PowerTube_Stop()
@@ -74,8 +101,8 @@ namespace Microwave.Test.Integration
             System.Threading.Thread.Sleep(2100);
 
             _output.Received(1).OutputLine($"Display shows: {min:D2}:{sec:D2}");
-           
         }
+
 
         [Test]
         public void StartCooking_Expired()
